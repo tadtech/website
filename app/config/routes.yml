@@ -1,0 +1,4 @@
+landingPage:
+  path: /
+  defaults: { _controller: 'controller.landingPage:renderAction' }
+  methods: [GET]

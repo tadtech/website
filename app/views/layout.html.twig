@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tadtech{% if title is defined %} | {{ title }}{% endif %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://use.fontawesome.com/0b71b57928.js"></script>
+    <script src="https://use.typekit.net/ehe5jcr.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+</head>
+<body>
+    {% block content %}{% endblock %}
+</body>
+</html>

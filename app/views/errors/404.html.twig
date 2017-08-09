@@ -1,0 +1,13 @@
+{% extends "layout.html.twig" %}
+
+{% set title = '404 Not Found' %}
+
+{% block content %}
+    <div class="full">
+        <div class="content center">
+            <img src="/img/logo-full.svg" />
+            <h1>404 Not Found :(</h1>
+            <p>The page you requested was not found. Please check the URL you entered or go to our <a href="{{ path('landingPage') }}">homepage</a>.</p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,112 @@
+body {
+    background:#101010;
+    margin:0;
+    font-family:"ff-ocr-f-web", sans-serif;
+    font-size:20px;
+    color:#FFFFFF;
+}
+h1 {
+    font-size:1em;
+    font-weight:300;
+    margin:0;
+}
+.center {
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    margin:auto;
+}
+div.overlay {
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    left:-100vw;
+    background:#000;
+    border-right:1px solid #2B2B2B;
+    animation: overlaySlide ease-out 1s forwards;
+}
+div.left {
+    width:50vw;
+    height:100vh;
+    position:absolute;
+}
+div.left img {
+    animation: logoFade ease-out 3s .8s forwards;
+    opacity:0;
+    width:40%;
+}
+div.full {
+    width:100vw;
+    height:100vh;
+    position:absolute;
+}
+div.full div.content {
+    opacity:0;
+    animation: textFade ease-out 3s .8s forwards;
+    width:30%;
+    top:50%;
+    transform:translateY(-50%);
+    position:relative;
+    text-align:center;
+}
+div.full div.content img {
+    width:75%;
+    margin-bottom:1.5em;
+}
+div.right {
+    width:50vw;
+    height:100vh;
+    position:absolute;
+    right:0;
+}
+div.right div.content {
+    opacity:0;
+    animation: textFadeMove ease-out 3s .8s forwards;
+    width:40%;
+    top:50%;
+    transform:translateY(-50%);
+    position:relative;
+}
+div.right div.content p, div.full div.content p {
+    font-size:0.7em;
+    font-weight:300;
+    color:#B0B0B0;
+    margin:1em 0;
+}
+div.full div.content p {
+    margin-top:2.1em;
+    margin-bottom:0;
+}
+div.full a, div.right a, div.social a {
+    color:#FFFFFF;
+    text-decoration:none;
+    transition: color .4s ease-out;
+}
+div.right a:hover, div.full a:hover {
+    color:#87D57E;
+}
+div.social a {
+    font-size:0.7em;
+    display:inline-block;
+    margin-left:1.2em;
+    padding:0.3em;
+}
+div.social a:first-child {
+    margin-left:-0.3em;
+}
+@keyframes overlaySlide {
+    to { transform: translateX(50%) skewX(-25deg); }
+}
+@keyframes logoFade {
+    from { transform: translateX(-15px) }
+    to { opacity: 1; }
+}
+@keyframes textFade {
+    to { opacity: 1; }
+}
+@keyframes textFadeMove {
+    from { transform: translate(15px, -50%) }
+    to { opacity: 1; }
+}
