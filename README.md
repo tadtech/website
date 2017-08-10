@@ -2,6 +2,8 @@
 
 This repository contains the source code, static assets and development scripts for the Tadtech website ([tadtech.co.uk][1]). 
 
+[![Build Status](https://api.travis-ci.org/tadtech/website.svg?branch=master)](https://travis-ci.org/tadtech/website)
+
 ## Requirements
 
 - Docker 17.06.0+
