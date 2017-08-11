@@ -35,6 +35,8 @@ class ErrorPageController
 
     /**
      * @param Twig_Environment $twig
+     * @param \Exception $exception
+     * @param int $code
      */
     public function __construct(Twig_Environment $twig, \Exception $exception, int $code)
     {
