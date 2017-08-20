@@ -1,4 +1,5 @@
 .idea/
 .docker/php/.env
+.DS_Store
 vendor/
 cache/
