@@ -27,7 +27,7 @@ class ErrorPageControllerTest extends WebTestCase
         $crawler = $client->request('GET', '/foo');
 
         $this->assertTrue($client->getResponse()->isNotFound());
-        $this->assertCount(1, $crawler->filter('body:contains("404 Not Found :(")'));
+        $this->assertContains('404 Not Found :(', $crawler->filter('body')->text());
     }
 
     /**
@@ -39,6 +39,6 @@ class ErrorPageControllerTest extends WebTestCase
         $crawler = $client->request('POST', '/');
 
         $this->assertSame($client->getResponse()->getStatusCode(), 405);
-        $this->assertCount(1, $crawler->filter('body:contains("We\'re really sorry :(")'));
+        $this->assertContains('We\'re really sorry :(', $crawler->filter('body')->text());
     }
 }

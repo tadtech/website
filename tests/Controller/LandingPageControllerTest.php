@@ -27,6 +27,6 @@ class LandingPageControllerTest extends WebTestCase
         $crawler = $client->request('GET', '/');
 
         $this->assertTrue($client->getResponse()->isOk());
-        $this->assertCount(1, $crawler->filter('body:contains("Welcome to Tadtech")'));
+        $this->assertContains('Welcome to Tadtech', $crawler->filter('body')->text());
     }
 }
