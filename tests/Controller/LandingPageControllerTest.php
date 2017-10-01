@@ -28,5 +28,10 @@ class LandingPageControllerTest extends WebTestCase
 
         $this->assertTrue($client->getResponse()->isOk());
         $this->assertContains('Welcome to Tadtech', $crawler->filter('body')->text());
+
+        $this->assertSame('https://twitter.com/tadtechltd', $crawler->filter('a#twitter')->first()->attr('href'));
+        $this->assertSame('https://www.facebook.com/tadtech', $crawler->filter('a#facebook')->first()->attr('href'));
+        $this->assertSame('https://github.com/tadtech', $crawler->filter('a#github')->first()->attr('href'));
+        $this->assertSame('mailto:info@tadtech.co.uk', $crawler->filter('a#email')->first()->attr('href'));
     }
 }
